@@ -7,7 +7,27 @@
 ---
 
 
-### Team Introductions & Intro to CIDR
+## Introductions
+
+
+<div class="headshots">
+
+![Michael Rau](assets/people/michael_rau.jpeg) Michael Rau
+
+![Peter Broadwell](assets/people/peter_broadwell.jpeg) Peter Broadwell
+
+![Simon Wiles](assets/people/simon_wiles.jpeg) Simon Wiles
+
+![Vijoy Abraham](assets/people/vijoy_abraham.jpeg) Vijoy Abraham
+
+</div>
+
+<div class="logos">
+
+![TAPS](assets/logos/taps.png)
+![CIDR](assets/logos/CIDR_on_dark.no_text.1216x582.png)
+
+</div>
 
 
 ---
@@ -53,8 +73,8 @@
 
 <div class="logos">
 
-![TAPS](assets/taps.png)
-![CIDR](assets/cidr.420x140.png)
+![TAPS](assets/logos/taps.png)
+![CIDR](assets/logos/CIDR_on_dark.no_text.1216x582.png)
 
 </div>
 
