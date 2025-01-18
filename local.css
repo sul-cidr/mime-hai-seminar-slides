@@ -24,6 +24,12 @@
   }
 }
 
+.reveal .slide-background-content:has(iframe) {
+  height: 100vh;
+  top: 10%;
+  left: 10%;
+}
+
 .reveal h1 {
   background-color: var(--box-color);
   border-radius: 8px;
