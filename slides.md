@@ -25,7 +25,8 @@
 <div class="logos">
 
 ![TAPS](assets/logos/taps.png)
-![CIDR](assets/logos/CIDR_on_dark.no_text.1216x582.png)
+![CIDR](assets/logos/CIDR_on_dark.1237x677.png)
+![SUL](assets/logos/sul_white.png)
 
 </div>
 
@@ -74,7 +75,8 @@
 <div class="logos">
 
 ![TAPS](assets/logos/taps.png)
-![CIDR](assets/logos/CIDR_on_dark.no_text.1216x582.png)
+![CIDR](assets/logos/CIDR_on_dark.1237x677.png)
+![SUL](assets/logos/sul_white.png)
 
 </div>
 
