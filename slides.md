@@ -58,15 +58,13 @@
 ---
 
 
-### Direct comparison (same work, different directors)
+## Direct comparison (same work, different directors)
 
-<div class="bokeh-embed">
 
 <section data-background-iframe="assets/bokeh/dg_poem_comparison.html"
          data-background-interactive>
 </section>
 
-</div>
 
 ---
 
