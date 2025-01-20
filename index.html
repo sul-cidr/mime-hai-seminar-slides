@@ -40,6 +40,19 @@
         slideNumber: "c/t",
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
         markdown: { smartypants: true },
+        keyboard: {
+          13: "next",
+          32: (evt) => {
+            const currentSlide = Reveal.getCurrentSlide();
+            const currentVideo = currentSlide.getElementsByTagName("video")[0];
+            if (currentVideo) {
+              if (currentVideo.paused == true) currentVideo.play();
+              else currentVideo.pause();
+            } else {
+              Reveal.next();
+            }
+          },
+        },
       });
     </script>
   </body>
