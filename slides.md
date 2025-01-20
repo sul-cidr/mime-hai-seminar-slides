@@ -226,7 +226,7 @@ Body keypoint coords (3D)
 
 </div>
 
-<div class="headshots">
+<div class="screenshots">
 
 ![Michael Hampe](assets/results/Viva_Hampe-Karajan.png) Michael Hampe
 
@@ -248,7 +248,7 @@ Body keypoint coords (3D)
 
 </div>
 
-<div class="headshots">
+<div class="screenshots">
 
 ![Sven-Erik Bechtolf](assets/results/Viva_Bechtolf-Zurich.png) Sven-Erik Bechtolf
 
@@ -266,7 +266,6 @@ Body keypoint coords (3D)
 
 <div class="r-stack">
   <img
-    class="fragment"
     src="assets/methods/Don_Giovanni-Soderblom-Helsinki_UzxYEVbOS5w.mp4_chroma_time_correspondences.png"
   />
   <img
