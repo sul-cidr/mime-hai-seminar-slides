@@ -33,13 +33,13 @@
 ---
 
 
-### Defining the Problem (understanding pose in theater)
+## Defining the Problem (understanding pose in theater)
 
 
 ---
 
 
-### A Breakthrough: Temporal-Convolutional vs. Transformer Models
+## A Breakthrough: Temporal-Convolutional vs. Transformer Models
 
 <div class="img-row">
 
@@ -53,7 +53,7 @@
 ---
 
 
-### A Breakthrough, Courtesy of the HAI Spring 2022 Conference
+## A Breakthrough, Courtesy of the HAI Spring 2022 Conference
 
 <div class="img-row">
 
@@ -67,7 +67,7 @@
 ---
 
 
-### PHALP: Predicting Human Appearance, Location and Pose
+## PHALP: Predicting Human Appearance, Location and Pose
 
 <img class="r-stretch" src="assets/methods/phalp_teaser.png" />
 
@@ -77,7 +77,7 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 ---
 
 
-### Vision Transformers (ViT)
+## Vision Transformers (ViT)
 
 <div class="img-row">
 
@@ -92,7 +92,7 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 ---
 
 
-### How PHALP Uses Transformers for Detection and Tracking
+## How PHALP Uses Transformers for Detection and Tracking
 
 <img class="r-stretch" src="assets/methods/4D-Humans.png" />
 
@@ -102,7 +102,7 @@ Shubham Goel, Georgios Pavlakos, Jathushan Rajasegaran, Angjoo Kanazawa, Jitendr
 ---
 
 
-### LART: Lagrangian Action Recognition with Tracking
+## LART: Lagrangian Action Recognition with Tracking
 
 <img class="r-stretch" src="assets/methods/LART.png" />
 
@@ -111,7 +111,8 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Christoph Feichtenhof
 
 ---
 
-### View-Invariant ("2.5D") Pose Embeddings
+
+## View-Invariant ("2.5D") Pose Embeddings
 
 <img class="r-stretch" src="assets/methods/view-invariant_embeddings.jpg" />
 
@@ -121,19 +122,19 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Building the MIME Platform / Live Demo
+## Building the MIME Platform / Live Demo
 
 
 ---
 
 
-### Results & Analysis
+## Results & Analysis
 
 
 ---
 
 
-### The Test Corpus: Assembling Multiple Works per Director
+## The Test Corpus: Assembling Multiple Works per Director
 
 <img class="r-stretch" src="assets/results/31_performances.png" />
 
@@ -141,7 +142,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Which Features Are Best for Differentiating between Directors?
+## Which Features Are Best for Differentiating between Directors?
 
 <div class="img-row">
 
@@ -155,7 +156,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Which Features Are Best for Differentiating between Directors?
+## Which Features Are Best for Differentiating between Directors?
 
 <div class="img-row">
 
@@ -169,7 +170,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Which Features Are Best for Differentiating between Directors?
+## Which Features Are Best for Differentiating between Directors?
 
 (Summary statistics of classification experiments go here)
 
@@ -177,7 +178,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Which Features Are Best for Differentiating between Directors?
+## Which Features Are Best for Differentiating between Directors?
 
 <div class="img-row">
 
@@ -193,7 +194,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Visualizing Directors' Pose "Repertoires"
+## Visualizing Directors' Pose "Repertoires"
 
 <img class="r-stretch" src="assets/results/poem_umap_sampled_2.png" />
 
@@ -201,7 +202,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Direct Comparison: Multiple Directors' Stagings of the Same Work
+## Direct Comparison: Multiple Directors' Stagings of the Same Work
 
 <div>
 
@@ -223,7 +224,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Direct Comparison: Multiple Directors' Stagings of the Same Work
+## Direct Comparison: Multiple Directors' Stagings of the Same Work
 
 <div>
 
@@ -245,7 +246,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Aligning Performances (by Music) to Estimate Average Pose "Consensus"
+## Aligning Performances (by Music) to Estimate Average Pose "Consensus"
 
 <div class="r-stack">
   <img
@@ -266,7 +267,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Comparing Each Staging's Poses to the Overall "Consensus"
+## Comparing Each Staging's Poses to the Overall "Consensus"
 
 <section data-background-iframe="assets/bokeh/dg_poem_comparison.html"
          data-background-interactive>
@@ -275,13 +276,13 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Implications and Future Directions
+## Implications and Future Directions
 
 
 ---
 
 
-### Q & A
+## Questions & Discussion
 
 
 ---
