@@ -157,9 +157,17 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 ### Which Features Are Best for Differentiating between Directors?
 
+<img class="r-stretch" src="assets/results/31_performances_hl.png" />
+
+
+---
+
+
+### Which Features Are Best for Differentiating between Directors?
+
 <div class="img-row">
 
-![3D coordinates confusion matrix](assets/results/LOO_3D_coords.png "3D coordinates confusion matrix") Body keypoint coords (3d)
+![3D coordinates confusion matrix](assets/results/LOO_3D_coords.png "3D coordinates confusion matrix") Body keypoint coords (3D)
 
 ![Action recognition embeddings confusion matrix](assets/results/LOO_action_features.png "Action recognition embeddings confusion matrix") Action recognition embeddings
 
@@ -183,11 +191,19 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 ![Pose motion and distance feature importances](assets/results/importances_motion_distance_nb.png "Pose motion and distance feature importances") Pose motion and distance
 
-![Keypoint importances](assets/results/importances_keypoints_nb.png "Keypoint importances") Body keypoint coords (3D)
-
 ![Pose embedding importances](assets/results/importances_poem_nb.png "Pose embedding importances") View-invariant pose embedding elements
 
 </div>
+
+
+---
+
+
+### Which Features Are Best for Differentiating between Directors?
+
+<img class="r-stretch" src="assets/results/importances_keypoints_nb.png" />
+
+Body keypoint coords (3D)
 
 
 ---
