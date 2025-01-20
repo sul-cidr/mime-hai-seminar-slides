@@ -77,7 +77,7 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 ---
 
 
-## Vision Transformers (ViT)
+## Vision Transformers (ViT): Attention Comes to Pixel Patches
 
 <div class="img-row">
 
@@ -164,7 +164,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Which Features Are Best for Differentiating between Directors?
+## Which Features Are Best for Differentiating between Directors?
 
 <div class="img-row">
 
@@ -200,7 +200,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-### Which Features Are Best for Differentiating between Directors?
+## Which Features Are Best for Differentiating between Directors?
 
 <img class="r-stretch" src="assets/results/importances_keypoints_nb.png" />
 
@@ -210,7 +210,7 @@ Body keypoint coords (3D)
 ---
 
 
-### Visualizing Directors' Pose "Repertoires"
+## Visualizing Directors' Pose "Repertoires"
 
 <img class="r-stretch" src="assets/results/poem_umap_sampled_2.png" />
 
@@ -262,7 +262,7 @@ Body keypoint coords (3D)
 ---
 
 
-## Aligning Performances (by Music) to Estimate Average Pose "Consensus"
+## Aligning Performances (by Music) to Get Average Pose "Consensus"
 
 <div class="r-stack">
   <img
@@ -283,7 +283,7 @@ Body keypoint coords (3D)
 ---
 
 
-## Comparing Each Staging's Poses to the Overall "Consensus"
+## Comparing Each Director's Poses to the "Consensus" Average
 
 <section data-background-iframe="assets/bokeh/dg_poem_comparison.html"
          data-background-interactive>
