@@ -58,6 +58,17 @@
 ---
 
 
+## Direct comparison (same work, different directors)
+
+
+<section data-background-iframe="assets/bokeh/dg_poem_comparison.html"
+         data-background-interactive>
+</section>
+
+
+---
+
+
 ### Implications and Future Directions
 
 

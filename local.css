@@ -24,6 +24,21 @@
   }
 }
 
+.reveal
+  .slide-background-content:has(
+    iframe[src="assets/bokeh/dg_poem_comparison.html"]
+  ) {
+  --margin-top: 12%;
+  --margin-bottom: 5%;
+  --margin-left: 5%;
+  --margin-right: 5%;
+
+  height: calc(100% - var(--margin-bottom) - var(--margin-top));
+  left: var(--margin-left);
+  top: var(--margin-top);
+  width: calc(100% - var(--margin-left) - var(--margin-right));
+}
+
 .reveal h1 {
   background-color: var(--box-color);
   border-radius: 8px;
