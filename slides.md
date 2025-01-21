@@ -521,13 +521,7 @@ In conclusion, while this research presents exciting possibilities for quantitat
 ---
 
 
-# Questions & Discussion
-
-
----
-
-
-# Thank You
+# Thank You&#x21;
 
 <div class="logos">
 
