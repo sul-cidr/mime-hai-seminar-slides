@@ -78,6 +78,9 @@
             }
           },
         },
+      }).then(() => {
+        const demoVideo = document.getElementById("platform-demo-video");
+        demoVideo.addEventListener("play", () => demoVideo.requestFullscreen());
       });
     </script>
   </body>

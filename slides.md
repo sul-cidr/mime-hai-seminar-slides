@@ -287,7 +287,7 @@ The final key tool that we applied to extract, analyze and compare pose data doe
 
 ## Platform Demonstration
 
-<video controls muted src="assets/mime-hai-seminar-demo-video.mp4"></video>
+<video id="platform-demo-video" controls muted src="assets/mime-hai-seminar-demo-video.mp4"></video>
 
 
 ---
