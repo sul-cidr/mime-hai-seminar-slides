@@ -151,8 +151,14 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
-## Building the MIME Platform / Live Demo
+# The MIME Platform
 
+---
+
+
+## Platform Demonstration
+
+<video controls muted src="assets/mime-hai-seminar-demo-video.mp4"></video>
 
 ---
 
