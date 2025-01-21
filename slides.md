@@ -111,6 +111,8 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 </div>
 
+<!-- .slide: data-transition="slide-in fade-out" -->
+
 ---
 
 
@@ -132,6 +134,7 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 </div>
 
+<!-- .slide: data-transition="fade-in slide-out" -->
 
 ---
 
