@@ -65,6 +65,7 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 # Methodology
 
+
 ---
 
 
@@ -78,6 +79,12 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 </div>
 
+:::
+A fundamental aspect of this project is that we want to work with any theatrical performance recorded as a regular moving image -- so as a series of 2D frames without any built-in augmentation in the form of 3D data or motion capture dots or wearable intertial tracker telemetry (all of which would make pose estimation much easier). Working with regular moving images greatly increases the materials available, opening up basically the entire history of theater on film. However, computationally extracting accurate pose data from such recordings can be quite challenging, especially if they're "in the wild" recordings, whether made live on stage or in a studio, with multiple cameras, cuts, occlusion, shadows and so forth. In fact, this wasn't possible at all until about 2018, when advances in convolutional neural networks for computer vision led to the OpenPose project from CMU.
+
+These convolutional approaches slowly improved during the following 5 years, and they worked well enough on recordings made in controlled environments and for things like TikTok videos with only one or two people who are almost entirely in the frame at all times. They struggled mightily however with in-the-wild videos such as the example shown here from the Stanford TAPS mainstage production of Julius Caesar from 2023 (directed by Michael!) and were even worse at estimating 3D coordinates and tracking multiple people in the shot.
+
+So when we began this project, we were basically hoping that better models would come along to give us better data. And as has happens fairly often during the current era of AI research, we were in fact able to pull off the equivalent of jumping out of a plane and having someone toss a better parachute to us. This parachute came in the form a of a new generation of transformer-based models for computer vision, and more specifically via some great software tools for pose estimation and tracking from a research group across the Bay at UC Berkeley.
 
 ---
 
@@ -92,6 +99,9 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 </div>
 
+:::
+Which we learned about when attending the 2022 HAI Spring Conference! That's Angjoo Kanazawa, the senior faculty member overseeing most of these projects, along with Jitendra Malik at UC Berkeley.
+
 
 ---
 
@@ -102,6 +112,8 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tracking People by Predicting 3D Appearance, Location & Pose.” arxiv.org/abs/2112.04477 (2021)
 
+:::
+The most crucially important of these tools is charmingly named PHALP -- you can see the acronym there -- and it achieves what is still state-of-the-art accuracy in pose estimation by interweaving the tasks of estimating human forms while also noting their appearance (that is, things like the colors on the clothes they're wearing) and tracking their trajectories over time in an estimated 3D space.
 
 ---
 
@@ -117,6 +129,9 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 
 </div>
 
+:::
+I mentioned that these models derive much of their effectiveness from the Transformer architecture, which most of us first learned about via its applications to language models (and eventually to large language models) from its introduction in 2017, and especially the power of its "multi-headed self-attention" mechanism to encode complex semantic relationships between words. Vision transformers, which apply the same techniques to images, came along in 2021, and as you can see here, work by breaking up the image into long strings of 16x16-pixel patches that are essentially treated like words, after being passed through many multi-layer perceptrons.
+
 
 ---
 
@@ -126,6 +141,9 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 <img class="r-stretch" src="assets/methods/4D-Humans.png" />
 
 Shubham Goel, Georgios Pavlakos, Jathushan Rajasegaran, Angjoo Kanazawa, Jitendra Malik. “Humans in 4D: Reconstructing and Tracking Humans with Transformers.” arxiv.org/abs/2305.20091 (2023)
+
+:::
+Here are some further illustrations of how the PHALP tool combines not just vision transformers but also a separate temporally aware transformer to track poses over time, while modeling the positions of pose joints and surfaces, as well as the camera in the 3D environment.
 
 
 ---
@@ -137,6 +155,9 @@ Shubham Goel, Georgios Pavlakos, Jathushan Rajasegaran, Angjoo Kanazawa, Jitendr
 
 Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Christoph Feichtenhofer, Jitendra Malik. “On the Benefits of 3D Pose and Tracking for Human Action Recognition.” arxiv.org/abs/2304.01199 (2023)
 
+:::
+The 3D pose tracking abilities of PHALP gave us much better pose data to use when applied to theater videos. We later augmented this with more data from a customized action recognition tool the same team built, named LART (they really like these one-syllable acronyms). The "Lagrangian" bit means that the tool considers each pose tracklet separately, producing distinct action descriptions (from a taxonomy of "atomic visual actions") for each pose in a shot. Compare this to other approaches which use similar models to describe an entire scene, rather than what each person in the scene is doing. Crucially, this software also produces a 60-element vector to describe every detected action, which provide much more computationally meaningful description of the actions than the simple labels from the taxonomy (things like "watch, stand, walk").
+
 
 ---
 
@@ -146,6 +167,9 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Christoph Feichtenhof
 <img class="r-stretch" src="assets/methods/view-invariant_embeddings.jpg" />
 
 Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam and Ting Liu. “View-Invariant Probabilistic Embedding for Human Pose.” In Proceedings of the European Conference on Computer Vision, Springer, 2020, pp. 53-70.
+
+:::
+The final key tool that we applied to extract, analyze and compare pose data does not come from Berkeley, rather this is from Google and Caltech. It provides a trained model that can project the 13 X,Y coordinates of a pose in 2D into a probabilistic embedding space (which actually has 16 dimensions), that situates poses closer together if they are probably similar in their actual 3D representations. Note that we also get the esimated 3D coordinates of the poses from PHALP, but as we'll see later, sometimes this probabilistic embedding is more useful for analysis. 
 
 
 ---
@@ -206,6 +230,11 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 <img class="r-stretch" src="assets/results/31_performances.png" />
 
+:::
+To approach the question of what the pose, action, motion and position data we can extract from recordings via the MIME platform might tell us about how theater directors deploy these elements to produce specific effects that carry their own distinct stylistic signature, we focused on three high-profile, contemporary "auteur" directors: Bill T. Jones, Romeo Castellucci, and Krzysztof Warlikowski, selecting 10 or 11 performances each has directed during his career. We ran commercial or archival recordings of these performances through the PHALP pipeline unaltered, other than upscaling some of them to at least HD quality, because the models work better with high-resolution footage.
+
+As you can see, this produced 10-20 hours of pose data per director. The table shows many of the summary statistics of the performances, which we'll discuss in more detail soon.
+
 
 ---
 
@@ -222,6 +251,11 @@ View-invariant pose embeddings
 
 </div>
 
+:::
+We framed the computational approach to directorial style as a performance-to-director classification problem: from the derived pose, action, motion and distance data, which elements are most effective at predicting the correct stage director for a given performance? We began with “leave one out” (LOO) tests in which we assembled the average pose distance and motion features into a vector for each performance, then did the same for the view-invariant pose embedding vectors and action recognition vectors, and also the 3D “global orientation” pose keypoint coordinates, and compared these to aggregate vectors that averaged values from all of a director’s works except the held-out performance, initially matching them to the director's vector to which they had the highest cosine similarity.
+
+Here you can see the resulting confusion matrices from some of these simple "leave one out" experiments. The basic pose and motion statistics were not as effective at differentiating works by Castellucci and Warlikowski as they were at telling the difference between Bill T. Jones and the other two, while the aggregated pose embeddings were more successful at differentiating the works of all three.
+
 
 ---
 
@@ -229,6 +263,9 @@ View-invariant pose embeddings
 ## Which Features Are Best for Differentiating between Directors?
 
 <img class="r-stretch" src="assets/results/31_performances_hl.png" />
+
+:::
+Returning to the full table of performances, now with some colorization to point out recordings wih higher in-place or "sidereal" (relative to the backdrop) motion and inter-pose distances. As you can see, most are from Bill T. Jones, who primarily directs dance works, while the others tend to direct mostly operas and other more static forms of stage plays. So the motion and distance-based comparison may be better at clueing in to the difference in primary genres between the directors, while the pose embedding approach seems to be picking up something distinctive about each director's style. We'll look into what that might be in a minute.
 
 
 ---
@@ -246,6 +283,9 @@ Action recognition embeddings
 
 </div>
 
+:::
+Here are some further leave-one-out experiments with the 3D pose coordinates and action recognition vectors used as features. The action recognition embeddings do seem to be somewhat better than the 3D coordinates for telling the directors apart.
+
 
 ---
 
@@ -254,6 +294,8 @@ Action recognition embeddings
 
 <img class="r-stretch" src="assets/results/classification_experiments.png" />
 
+:::
+The results of the leave-one-out tests are largely replicated in slightly analyses involving more sophisticated classification algorithms and using 10-fold cross-validation with different random seeds, when available, to try to get a better sense of how these approaches might do if the data set were larger. Remember that 33% accuracy would be expected by chance. It's interesting, however, that the Gaussian Naive Bayes classifier is nearly as good, and certainly within the margin of error, at differentiating between directors based on motion and distance statistics as the formerly dominant embedding approaches are with any approach. (Note that we tried many other classifiers here, including some fancy neural models, but their results were all in the ranges of the Random Forest and Gaussian Naive Bayes methods).
 
 ---
 
@@ -270,6 +312,11 @@ View-invariant pose embedding
 
 </div>
 
+:::
+To get at the question of exactly which elements of these feature sets the models found the most useful at differentiating between directors, we ran some feature importance tests (specifically with the Gaussian Naive Bayes model, as it generally performed the best). Although the error bars are large (again) due to the small set of performances to be classified, it seems that the average amount of motion in a video is one of the most powerful predictors of the director's identity, while the average distance between performers on stage is not so useful.
+
+In the case of the embeddings, however, it's more difficult to determine what the salience of "feature 4" (out of 16) actually means for poses -- we'll show some initial steps we've taken to dig into this in a couple of slides.
+
 
 ---
 
@@ -279,6 +326,8 @@ View-invariant pose embedding
 Body keypoint coords (3D)  
 <img class="r-stretch" src="assets/results/importances_keypoints_nb.png" />
 
+:::
+And considering the 3D body keypoint coordinates, this plot might be a bit hard to read, but essentially the lateral positions of the right wrist, and then the left wrist as viewed from the "global" perspective (essentially from directly in front of the actor) was the most indicative of a director's style, followed by the lateral apsects of the right elbow and knee, then other aspects of the shoulders, knees, ankles, nose, with the hips being less important. The data are quite noisy here, but interestingly the right-handedness bias (due to up to 90% of the global population being right-handed) does seem to extend to the right side of the body more generally.
 
 ---
 
@@ -286,6 +335,11 @@ Body keypoint coords (3D)
 ## Visualizing Directors' Pose "Repertoires"
 
 <img class="r-stretch" src="assets/results/poem_umap_sampled_2.png" />
+
+:::
+To explore how the directors' pose "repertoires" might be distributed through the view-invariant pose embedding space, and hopefully get a better sense of what aspects of these embeddings were helping to differentiate the directors, we plotted a 1% sample of all of their pose embeddings into a 2D space via UMAP projection as color-coded dots. The larger hexagons represent each director's overall average pose embedding. Although we can't directly translate these averages into poses, we can search for the most similar poses in the entire data set thanks to MIME's powerful vector database, and we've shown some of those here in the callouts.
+
+The callouts do seem to reveal useful insights, like the overall greater similarity between Castellucci’s and Warlikowski’s pose repertoires relative to Jones’s, and the tendencies of Jones to employ dramatically contorted poses, Castellucci to favor hunched-over standing postures, and Warlikowski to deploy figures in an active sitting position.
 
 
 ---
@@ -309,6 +363,10 @@ Body keypoint coords (3D)
 
 </div>
 
+:::
+Our final analytical experiment to date, which is still a work in progress, sort of inverts the previous approach and instead considers what MIME can reveal when comparing staging from seven different directors who are all directing the same work -- in this case the famous Mozart/Da Ponte opera Don Giovanni from 1787.
+
+The screenshots below show some pose estimation output from the directors -- note that in every case this is the exact same scene, in the finale of Act I.
 
 ---
 
@@ -331,6 +389,9 @@ Body keypoint coords (3D)
 
 </div>
 
+:::
+The table above gives numerous derived statistics of the performances, colorized to highlight entries with greater degrees of movement, distance between actors, and overall deviation from the average pose and actions (aka "interest" as we saw in Simon's demo of the MIME interface). As the table is also ordered chronologically, it does seem to indicate a general tendency for performances to get more creative and/or "weird" in their stagings over time, as determined via pose and action estimation.
+
 
 ---
 
@@ -352,6 +413,12 @@ Body keypoint coords (3D)
 </div>
 
 
+:::
+Comparing the performances of Don Giovanni involved aligning all of the performances down to the sub-second level, specifically so that we could calculate the average poses and actions deployed at each moment of the opera -- representing what folklorists refer to as the "consensus form" or "tradition dominant" of a cultural expressive form -- and then calculate the degree to which each director's staging deviated from this consensus at each point.
+
+Practically speaking, the easiest way to align the recordings, which only works because the work is an all-sung opera, involved using some old-fashioned signal processing/music information retrieval "AI" techniques to match the musical pitches heard at each point, then correcting for the significant differences in tempo, non-musical action, and the occasional omission of certain scenes via the dynamic time-warping algorithm.
+
+
 ---
 
 
@@ -360,6 +427,9 @@ Body keypoint coords (3D)
 <section data-background-iframe="assets/bokeh/dg_poem_comparison.html"
          data-background-interactive>
 </section>
+
+:::
+As a final analytical output of the effort just described, we can plot the similarity of each of the 7 performances to the average pose "consensus" across the entire work (the dashed lines are scene and act boundaries). This is still a work in progress, but we can use this analysis to detect patterns such as certain scenes in which stagings are more likely to deviate from the consensus poses, and eventually use this to detect and highlight automatically where directors might use especially distinctive poses and actions. Stay tuned...
 
 ---
 
