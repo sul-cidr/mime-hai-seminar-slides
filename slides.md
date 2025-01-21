@@ -54,11 +54,15 @@ I’ll ask Michael to come up now and share the project’s problem statement.
 
 ## The Problem: Understanding Pose in Theater
 
+
 ## Methodology: Models and Tools
+
 
 ## Building the MIME Platform (Demo)
 
+
 ## Results and Analysis
+
 
 ## Implications and Future Directions
 
@@ -71,11 +75,11 @@ I’ll ask Michael to come up now and share the project’s problem statement.
 :::
 Pose and staging lies at the intersection of authorial intent, directorial vision, and is mediated by the performer, and shaped by design choices.  Examining pose and staging in theater can be tricky since it sits at the heart of artistic expression in the theater, and now, we’re adding computational analysis. At its core, our problem revolves around a fundamental question: How can we quantify and analyze the physical arrangements and movements of actors on stage in a way that reveals something meaningful about the director's creative contribution?
 
-In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In theater, iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style. 
+In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In theater, iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style.
 
 However, these individual, memorable poses are just the tip of the iceberg. Our challenge lies in understanding the aggregate effect of all poses throughout a production, and even more ambitiously, across multiple productions by the same director. This is where we begin to approach the notion of a director's signature or style.
 
-In film studies, auteur theory provides a framework for understanding a director's unique imprint on their work. Film directors have a range of tools at their disposal – camera angles, editing techniques, lighting choices – that make their stylistic signatures more readily apparent. In theater, however, the director's expressive capabilities are more constrained, and their contribution can be more elusive to pin down. In the theater, a director is constrained more by the physical space that they’re staging in, and the fact that their work happens in real-time, by live actors,who mediate the director’s staging. 
+In film studies, auteur theory provides a framework for understanding a director's unique imprint on their work. Film directors have a range of tools at their disposal – camera angles, editing techniques, lighting choices – that make their stylistic signatures more readily apparent. In theater, however, the director's expressive capabilities are more constrained, and their contribution can be more elusive to pin down. In the theater, a director is constrained more by the physical space that they’re staging in, and the fact that their work happens in real-time, by live actors,who mediate the director’s staging.
 
 This is where the computational analysis of pose in theater becomes interesting. By leveraging technologies like pose estimation and action recognition, we can begin to quantify aspects of theatrical performance that were previously left to subjective interpretation. We can analyze not just individual poses, but patterns of movement, spatial relationships between performers, and even the rhythm and flow of a production.
 
@@ -238,7 +242,7 @@ The 3D pose tracking abilities of PHALP gave us much better pose data to use whe
 Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam and Ting Liu. “View-Invariant Probabilistic Embedding for Human Pose.” In Proceedings of the European Conference on Computer Vision, Springer, 2020, pp. 53-70.
 
 :::
-The final key tool that we applied to extract, analyze and compare pose data does not come from Berkeley, rather this is from Google and Caltech. It provides a trained model that can project the 13 X,Y coordinates of a pose in 2D into a probabilistic embedding space (which actually has 16 dimensions), that situates poses closer together if they are probably similar in their actual 3D representations. Note that we also get the esimated 3D coordinates of the poses from PHALP, but as we'll see later, sometimes this probabilistic embedding is more useful for analysis. 
+The final key tool that we applied to extract, analyze and compare pose data does not come from Berkeley, rather this is from Google and Caltech. It provides a trained model that can project the 13 X,Y coordinates of a pose in 2D into a probabilistic embedding space (which actually has 16 dimensions), that situates poses closer together if they are probably similar in their actual 3D representations. Note that we also get the esimated 3D coordinates of the poses from PHALP, but as we'll see later, sometimes this probabilistic embedding is more useful for analysis.
 
 
 ---
@@ -316,7 +320,7 @@ Pose motion and distance statistics
 ![Pose motion and distance confusion matrix](assets/results/LOO_motion_distance.png "Pose motion and distance confusion matrix")
 
 View-invariant pose embeddings
-![View-invariant pose embeddings confusion matrix](assets/results/LOO_POEM_features.png "View-invariant pose embeddings confusion matrix") 
+![View-invariant pose embeddings confusion matrix](assets/results/LOO_POEM_features.png "View-invariant pose embeddings confusion matrix")
 
 </div>
 
@@ -345,10 +349,10 @@ Returning to the full table of performances, now with some colorization to point
 <div class="img-row">
 
 Body keypoint coords (3D)
-![3D coordinates confusion matrix](assets/results/LOO_3D_coords.png "3D coordinates confusion matrix") 
+![3D coordinates confusion matrix](assets/results/LOO_3D_coords.png "3D coordinates confusion matrix")
 
 Action recognition embeddings
-![Action recognition embeddings confusion matrix](assets/results/LOO_action_features.png "Action recognition embeddings confusion matrix") 
+![Action recognition embeddings confusion matrix](assets/results/LOO_action_features.png "Action recognition embeddings confusion matrix")
 
 </div>
 
@@ -377,7 +381,7 @@ Pose motion and distance
 ![Pose motion and distance feature importances](assets/results/importances_motion_distance_nb.png "Pose motion and distance feature importances")
 
 View-invariant pose embedding
-![Pose embedding importances](assets/results/importances_poem_nb.png "Pose embedding importances") 
+![Pose embedding importances](assets/results/importances_poem_nb.png "Pose embedding importances")
 
 </div>
 
@@ -512,7 +516,6 @@ However, it is crucial to acknowledge the ethical considerations and limitations
 From an analytical standpoint, we must also recognize the limitations of focusing solely on pose and action. Theater is a multifaceted art form, and while pose is a critical component, it represents only one thread in a rich tapestry that includes dialogue, set design, lighting, sound, and more. Without taking those other elements into account, we miss out on interpreting the While this computational analysis provides valuable insights, it should be viewed as a complement to, rather than a replacement for, traditional methods of artistic analysis. It offers a narrow but powerful lens through which to examine performance, enriching our understanding rather than supplanting it.
 Finally, it is important to note that this computational approach cannot definitively determine directorial intent. The patterns observed may stem from conscious directorial choices, actor improvisations, or even unintentional recurring elements. As such, these findings should serve as a starting point for deeper, more nuanced investigations rather than as definitive conclusions.
 In conclusion, while this research presents exciting possibilities for quantitative analysis in the arts, its true value lies in its potential to complement and enhance traditional scholarly approaches. By integrating computational methods with expert human interpretation, we can develop a more comprehensive understanding of theatrical performance and directorial style, ultimately enriching both academic discourse and artistic practice.
-
 
 
 ---
