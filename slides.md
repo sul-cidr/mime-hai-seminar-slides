@@ -72,9 +72,9 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 <div class="img-row">
 
-![OpenPifPaf not doing well](assets/methods/OpenPifPaf_bad.jpg "OpenPifPaf not doing well") Open PifPaf<br> (Temporal-Convolutional)
+![OpenPifPaf not doing well](assets/methods/OpenPifPaf_bad.jpg "OpenPifPaf not doing well") <strong>Open PifPaf</strong><br> Temporal-convolutional<br>2D only, limited tracking
 
-![PHALP doing well](assets/methods/PHALP_good.jpg "PHALP doing well") PHALP<br>(Transformers)
+![PHALP doing well](assets/methods/PHALP_good.jpg "PHALP doing well") <strong>PHALP</strong><br>Transformers-based<br>3D, more robust to occlusion
 
 </div>
 
@@ -112,8 +112,8 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik. “Tr
 
 ![A vision transformer](assets/methods/vision-transformer.png "Vision transformer diagram") Alexey Dosovitskiy, et al. “An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.” In Proc. International Conference on Learning Representation 2021.
 
-![Transformer self-attention diagram](assets/methods/transformer_self-attention_visualization.png "Transformer self-attention diagram") Multi-headed self-attention, but with image patches, rather than words<br>
-(jalammar.github.io/illustrated-transformer/)
+![Transformer self-attention diagram](assets/methods/transformer_self-attention_visualization.png "Transformer self-attention diagram") Multi-headed self-attention, but with image patches instead of words<br>
+<small>jalammar.github.io/illustrated-transformer/</small>
 
 </div>
 
@@ -141,7 +141,7 @@ Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Christoph Feichtenhof
 ---
 
 
-## View-Invariant ("2.5D") Pose Embeddings
+## Probabilistic View-Invariant (2D+) Pose Embeddings
 
 <img class="r-stretch" src="assets/methods/view-invariant_embeddings.jpg" />
 
@@ -153,12 +153,14 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 # The MIME Platform
 
+
 ---
 
 
 ## Platform Demonstration
 
 <video controls muted src="assets/mime-hai-seminar-demo-video.mp4"></video>
+
 
 ---
 
@@ -181,9 +183,11 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 <div class="img-row">
 
-![Pose motion and distance confusion matrix](assets/results/LOO_motion_distance.png "Pose motion and distance confusion matrix") Pose motion and distance statistics
+Pose motion and distance statistics
+![Pose motion and distance confusion matrix](assets/results/LOO_motion_distance.png "Pose motion and distance confusion matrix")
 
-![View-invariant pose embeddings confusion matrix](assets/results/LOO_POEM_features.png "View-invariant pose embeddings confusion matrix") View-invariant pose embeddings
+View-invariant pose embeddings
+![View-invariant pose embeddings confusion matrix](assets/results/LOO_POEM_features.png "View-invariant pose embeddings confusion matrix") 
 
 </div>
 
@@ -203,9 +207,11 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 <div class="img-row">
 
-![3D coordinates confusion matrix](assets/results/LOO_3D_coords.png "3D coordinates confusion matrix") Body keypoint coords (3D)
+Body keypoint coords (3D)
+![3D coordinates confusion matrix](assets/results/LOO_3D_coords.png "3D coordinates confusion matrix") 
 
-![Action recognition embeddings confusion matrix](assets/results/LOO_action_features.png "Action recognition embeddings confusion matrix") Action recognition embeddings
+Action recognition embeddings
+![Action recognition embeddings confusion matrix](assets/results/LOO_action_features.png "Action recognition embeddings confusion matrix") 
 
 </div>
 
@@ -215,7 +221,7 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 ## Which Features Are Best for Differentiating between Directors?
 
-(Summary statistics of classification experiments go here)
+<img class="r-stretch" src="assets/results/classification_experiments.png" />
 
 
 ---
@@ -225,9 +231,11 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 <div class="img-row">
 
-![Pose motion and distance feature importances](assets/results/importances_motion_distance_nb.png "Pose motion and distance feature importances") Pose motion and distance
+Pose motion and distance
+![Pose motion and distance feature importances](assets/results/importances_motion_distance_nb.png "Pose motion and distance feature importances")
 
-![Pose embedding importances](assets/results/importances_poem_nb.png "Pose embedding importances") View-invariant pose embedding elements
+View-invariant pose embedding
+![Pose embedding importances](assets/results/importances_poem_nb.png "Pose embedding importances") 
 
 </div>
 
@@ -237,9 +245,8 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 
 ## Which Features Are Best for Differentiating between Directors?
 
+Body keypoint coords (3D)  
 <img class="r-stretch" src="assets/results/importances_keypoints_nb.png" />
-
-Body keypoint coords (3D)
 
 
 ---
@@ -285,7 +292,7 @@ Body keypoint coords (3D)
 
 <div class="screenshots">
 
-![Sven-Erik Bechtolf](assets/results/Viva_Bechtolf-Zurich.png) Sven-Erik Bechtolf
+![Sven-Eric Bechtolf](assets/results/Viva_Bechtolf-Zurich.png) Sven-Eric Bechtolf
 
 ![Damiano Michieletto](assets/results/Viva_Michieletto.png) Damiano Michieletto
 
