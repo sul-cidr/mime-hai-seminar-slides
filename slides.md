@@ -32,9 +32,23 @@
 </div>
 
 :::
-This research project leverages machine learning and computer vision to analyze directorial styles and other aspects of theater performances through the lens of pose and action recognition. By applying these techniques to video recordings of theatrical performances, we compare multiple performances per director to identify distinctive patterns in choreography and staging. Our approach combines distant and close viewing methodologies, allowing for a nuanced understanding of theatrical gestures and movements. By comparing different directors’ uses of pose, we aim to quantify the elusive concept of directorial style.
+Hello and thank you for joining us today. My name is Vijoy Abraham and I am the Head of the Center for Interdisciplinary Digital Research, part of Research Data Services unit at the Stanford Libraries. I’ll be introducing our topic, and project team.
 
-This interdisciplinary project bridges the gap between performing arts, computer science and digital humanities, offering new insights into theatrical analysis and refining our understanding of directorial signatures in live performance.
+Today’s presentation comes from the field of cultural analytics, whereby computational methods are applied to the study of cultural heritage. We will discuss and demonstrate our exploratory work in bringing machine learning techniques to the study of theater performance and, in particular, to the study of directorial style.
+
+The project, titled Machine Intelligence for Motion Exegesis, is the result of a collaboration between Assistant Professor Michael Rau, and the CIDR Developer Team at Research Data Services. That team consists of Peter Broadwell and Simon Wiles.
+
+Michael Rau is Assistant Professor of Theater and Performance Studies as well as an affiliate faculty member at HAI here at Stanford University. He has directed works internationally including plays, operas, and digital media projects and has been featured in the New York Times, the Guardian and the Telegraph, and was the recipient of a 2021 Artists + Machine Intelligence Research Award from Google. He 
+
+Peter Broadwell is a Digital Scholarship Research Developer at the Stanford University Libraries’ Center for Interdisciplinary Digital Research, where his work applies machine learning, web-based visualization, and other methods of digital analysis to complex cultural data. He has a Ph.D. in Musicology from the University of California, Los Angeles and an M.S. degree in Computer Science from the University of California, Berkeley.
+
+Simon Wiles is our other Digital Scholarship Research Developer
+
+This project is part of a long-running service at the Stanford Libraries where faculty are invited to engage with our team in exploring computational methods for analyzing, visualizing, and allowing for interactive exploration of their research. We have at times referred to these projects as Lighthouse Projects- our hope being that our collaborations are able to expose new pathways for scholarly inquiry that would only be possible through such long-term engagements and the provisioning of dedicated technical resources.
+
+We’ve been having a lot of fun with this project and we hope you enjoy it as well.
+
+I’ll ask Michael to come up now and share the project’s problem statement.
 
 
 ---
