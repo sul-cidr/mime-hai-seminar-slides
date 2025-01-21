@@ -40,6 +40,20 @@ This interdisciplinary project bridges the gap between performing arts, computer
 ---
 
 
+## The Problem: Understanding Pose in Theater
+
+## Methodology: Models and Tools
+
+## Building the MIME Platform (Live Demo)
+
+## Results and Analysis
+
+## Implications and Future Directions
+
+
+---
+
+
 # The Problem
 
 :::
@@ -58,6 +72,28 @@ The question that you might be asking yourself, is “A purely data-driven analy
 The solution, it seems, lies in a synthesis of approaches. By combining the insights of traditional theater scholarship with the analytical power of computational methods, we can begin to develop a more comprehensive understanding of pose in theater. We can use data to support and enhance our qualitative analyses, and we can use our human understanding of theatrical context to guide our interpretation of the data.
 
 Ultimately, the problem of pose in theater is not just about understanding physical arrangements on stage. It's about decoding the language of movement that directors use to communicate their artistic vision. It's about recognizing patterns across productions that might reveal deeper truths about a director's style or preoccupations. And perhaps most excitingly, it's about opening up new avenues for creativity and analysis in the world of theater.
+
+
+---
+
+
+## The Problem (and Opportunity)
+
+<div class="screenshots">
+
+![Michael Hampe](assets/results/Viva_Hampe-Karajan.png)
+
+![Romeo Castellucci](assets/results/Viva_Castellucci.png)
+
+![Erik Söderblom](assets/results/Viva_Soderblom-Helsinki.png)
+
+![Sven-Eric Bechtolf](assets/results/Viva_Bechtolf-Zurich.png)
+
+![Damiano Michieletto](assets/results/Viva_Michieletto.png)
+
+![Jean-François Sivadier](assets/results/Viva_Sivadier-Aix.png)
+
+</div>
 
 
 ---
