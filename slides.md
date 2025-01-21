@@ -56,7 +56,7 @@ I’ll ask Michael to come up now and share the project’s problem statement.
 
 ## Methodology: Models and Tools
 
-## Building the MIME Platform (Live Demo)
+## Building the MIME Platform (Demo)
 
 ## Results and Analysis
 
@@ -93,17 +93,38 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 <div class="screenshots">
 
-![Michael Hampe](assets/results/Viva_Hampe-Karajan.png)
+![Michael Hampe](assets/results/Hampe-Karajan_nopose.png)
 
-![Romeo Castellucci](assets/results/Viva_Castellucci.png)
+![Romeo Castellucci](assets/results/Castellucci-DG_nopose.png)
 
-![Erik Söderblom](assets/results/Viva_Soderblom-Helsinki.png)
+![Erik Söderblom](assets/results/Soderblom-Helsinki_nopose.png)
 
-![Sven-Eric Bechtolf](assets/results/Viva_Bechtolf-Zurich.png)
+![Sven-Eric Bechtolf](assets/results/Bechtolf-Zurich_nopose.png)
 
-![Damiano Michieletto](assets/results/Viva_Michieletto.png)
+![Damiano Michieletto](assets/results/Michieletto-La-Fenice_nopose.png)
 
-![Jean-François Sivadier](assets/results/Viva_Sivadier-Aix.png)
+![Jean-François Sivadier](assets/results/Sivadier-Aix_nopose.png)
+
+</div>
+
+---
+
+
+## The Problem (and Opportunity)
+
+<div class="screenshots">
+
+![Michael Hampe](assets/results/Hampe-Karajan.png)
+
+![Romeo Castellucci](assets/results/Castellucci-DG.png)
+
+![Erik Söderblom](assets/results/Soderblom-Helsinki.png)
+
+![Sven-Eric Bechtolf](assets/results/Bechtolf-Zurich.png)
+
+![Damiano Michieletto](assets/results/Michieletto-La-Fenice.png)
+
+![Jean-François Sivadier](assets/results/Sivadier-Aix.png)
 
 </div>
 
@@ -403,11 +424,11 @@ The callouts do seem to reveal useful insights, like the overall greater similar
 
 <div class="screenshots">
 
-![Michael Hampe](assets/results/Viva_Hampe-Karajan.png) Michael Hampe
+![Michael Hampe](assets/results/Hampe-Karajan.png) Michael Hampe
 
-![Romeo Castellucci](assets/results/Viva_Castellucci.png) Romeo Castellucci
+![Romeo Castellucci](assets/results/Castellucci-DG.png) Romeo Castellucci
 
-![Erik Söderblom](assets/results/Viva_Soderblom-Helsinki.png) Erik Söderblom
+![Erik Söderblom](assets/results/Soderblom-Helsinki.png) Erik Söderblom
 
 </div>
 
@@ -429,11 +450,11 @@ The screenshots below show some pose estimation output from the directors -- not
 
 <div class="screenshots">
 
-![Sven-Eric Bechtolf](assets/results/Viva_Bechtolf-Zurich.png) Sven-Eric Bechtolf
+![Sven-Eric Bechtolf](assets/results/Bechtolf-Zurich.png) Sven-Eric Bechtolf
 
-![Damiano Michieletto](assets/results/Viva_Michieletto.png) Damiano Michieletto
+![Damiano Michieletto](assets/results/Michieletto-La-Fenice.png) Damiano Michieletto
 
-![Jean-François Sivadier](assets/results/Viva_Sivadier-Aix.png) Jean-François Sivadier
+![Jean-François Sivadier](assets/results/Sivadier-Aix.png) Jean-François Sivadier
 
 </div>
 
