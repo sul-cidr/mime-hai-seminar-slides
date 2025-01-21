@@ -267,7 +267,7 @@ The final key tool that we applied to extract, analyze and compare pose data doe
     {"x":"295px","y":"8px","height":"143px","width":"459px"},
     {"x":"351px","y":"155px","height":"125px","width":"215px"},
     {"x":"629px","y":"155px","height":"125px","width":"150px"},
-    {"x":"844px","y":"131px","height":"168px","width":"235px"},
+    {"x":"828px","y":"131px","height":"168px","width":"251px"},
     {"x":"772px","y":"18px","height":"92px","width":"295px"}
   ]
   </script>
