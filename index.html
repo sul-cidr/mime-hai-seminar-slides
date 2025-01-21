@@ -45,9 +45,34 @@
           32: (evt) => {
             const currentSlide = Reveal.getCurrentSlide();
             const currentVideo = currentSlide.getElementsByTagName("video")[0];
+            const currentSpotlight = currentSlide.querySelector(".spotlight");
             if (currentVideo) {
               if (currentVideo.paused == true) currentVideo.play();
               else currentVideo.pause();
+            } else if (currentSpotlight) {
+              const spotlightData = JSON.parse(
+                currentSpotlight.querySelector(".spotlight-data").textContent,
+              );
+              const spotlightMask = currentSpotlight.querySelector(
+                "#spotlight-mask rect:last-child",
+              );
+              const nextWindowId =
+                +spotlightMask.dataset.splotlightIdx +
+                  (evt.shiftKey ? -1 : 1) || 0;
+
+              if (nextWindowId >= 0 && nextWindowId < spotlightData.length) {
+                Object.assign(spotlightMask.style, spotlightData[nextWindowId]);
+                spotlightMask.dataset.splotlightIdx = nextWindowId;
+              } else if (
+                nextWindowId === -1 ||
+                nextWindowId === spotlightData.length
+              ) {
+                spotlightMask.style = {};
+                spotlightMask.dataset.splotlightIdx = nextWindowId;
+              } else {
+                Reveal.next();
+                spotlightMask.dataset.splotlightIdx = null;
+              }
             } else {
               Reveal.next();
             }
