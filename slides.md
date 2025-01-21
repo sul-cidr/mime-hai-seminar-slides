@@ -156,6 +156,37 @@ Sun, Jennifer J, Jiaping Zhao, Liang-Chieh Chen, Florian Schroff, Hartwig Adam a
 ---
 
 
+## The MIME Platform
+
+<section>
+<div>
+
+![Platform Diagram](assets/building/platform_diagram.svg)
+<svg class="spotlight" viewBox="0 0 1080 300" preserveAspectRatio="none">
+  <script type="application/json" class="spotlight-data">
+  [
+    {"x":"17px","y":"28px","height":"215px","width":"245px"},
+    {"x":"295px","y":"8px","height":"143px","width":"459px"},
+    {"x":"351px","y":"155px","height":"125px","width":"215px"},
+    {"x":"629px","y":"155px","height":"125px","width":"150px"},
+    {"x":"844px","y":"131px","height":"168px","width":"235px"},
+    {"x":"772px","y":"18px","height":"92px","width":"295px"}
+  ]
+  </script>
+  <defs>
+    <mask id="spotlight-mask">
+      <rect width="1080" height="300" fill="white" opacity=".6"/>
+      <rect x="0" y="0" width="1080" height="300" fill="black"/>
+    </mask>
+  </defs>
+  <rect width="1080" height="300" fill="#000" mask="url(#spotlight-mask)"/>
+</svg>
+
+</div>
+
+---
+
+
 ## Platform Demonstration
 
 <video controls muted src="assets/mime-hai-seminar-demo-video.mp4"></video>
