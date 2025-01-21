@@ -38,15 +38,13 @@ Today’s presentation comes from the field of cultural analytics, whereby compu
 
 The project, titled Machine Intelligence for Motion Exegesis, is the result of a collaboration between Assistant Professor Michael Rau, and the CIDR Developer Team at Research Data Services. That team consists of Peter Broadwell and Simon Wiles.
 
-Michael Rau is Assistant Professor of Theater and Performance Studies as well as an affiliate faculty member at HAI here at Stanford University. He has directed works internationally including plays, operas, and digital media projects and has been featured in the New York Times, the Guardian and the Telegraph, and was the recipient of a 2021 Artists + Machine Intelligence Research Award from Google. He 
+Michael Rau is Assistant Professor of Theater and Performance Studies as well as an affiliate faculty member at HAI here at Stanford University. He has directed works internationally including plays, operas, and digital media projects and has been featured in the New York Times, the Guardian and the Telegraph, and was the recipient of a 2021 Artists + Machine Intelligence Research Award from Google. He received an MFA in Directing from Columbia University.
 
 Peter Broadwell is a Digital Scholarship Research Developer at the Stanford University Libraries’ Center for Interdisciplinary Digital Research, where his work applies machine learning, web-based visualization, and other methods of digital analysis to complex cultural data. He has a Ph.D. in Musicology from the University of California, Los Angeles and an M.S. degree in Computer Science from the University of California, Berkeley.
 
-Simon Wiles is our other Digital Scholarship Research Developer
+Simon Wiles is our other Digital Scholarship Research Developer. Top notch fellow.
 
 This project is part of a long-running service at the Stanford Libraries where faculty are invited to engage with our team in exploring computational methods for analyzing, visualizing, and allowing for interactive exploration of their research. We have at times referred to these projects as Lighthouse Projects- our hope being that our collaborations are able to expose new pathways for scholarly inquiry that would only be possible through such long-term engagements and the provisioning of dedicated technical resources.
-
-We’ve been having a lot of fun with this project and we hope you enjoy it as well.
 
 I’ll ask Michael to come up now and share the project’s problem statement.
 
