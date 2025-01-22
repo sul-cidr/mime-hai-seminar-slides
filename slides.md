@@ -86,10 +86,7 @@ Wtih that, I’ll ask Michael to come up now.
 # The Problem
 
 :::
-Pose and staging lies at the intersection of authorial intent, directorial vision, and is shaped by design choices and is ultimately mediated by the performer.  So examining pose and staging in theater can be challenging since it sits at the heart of artistic expression and is so common and fundamental to the theater that it is often ignored. Our research addresses a fundamental question: How can we quantify and analyze the physical arrangements and movements of actors on stage to reveal meaningful insights about the director's creative contribution? 
-
-
-
+Pose and staging lies at the intersection of authorial intent, directorial vision, and is shaped by design choices and is ultimately mediated by the performer.  So examining pose and staging in theater can be challenging since it sits at the heart of artistic expression and is so common and fundamental to the theater that it is often ignored. Our research addresses a fundamental question: How can we quantify and analyze the physical arrangements and movements of actors on stage to reveal meaningful insights about the director's creative contribution?
 
 
 ---
@@ -142,13 +139,13 @@ To answer this question, we turned to computer vision algorithms capable of dete
 <!-- .slide: data-transition="fade-in slide-out" -->
 
 :::
-In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In the theater, certain iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style. 
+In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In the theater, certain iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style.
 
 However, these individual, memorable poses are just the tip of the iceberg. Our challenge lies in understanding the aggregate effect of all poses throughout a production, and even more ambitiously, across multiple productions by the same director, or by different interpretations of the same material by different directors. This approach brings us closer  to identifying the director's contribution to pose within the theater.
 
-In film studies, there is a somewhat dated theory, called auteur theory which provides a framework for understanding a director's unique imprint on their work. Film directors have a range of tools at their disposal – camera angles, editing techniques, lighting choices – that make their stylistic signatures more readily apparent. In theater, however, the director's expressive capabilities are more constrained, and their contribution can be more elusive to pin down. In the theater, a director is constrained more by the physical space that they’re staging in, and the fact that their work happens in real-time, by live actors,who mediate the director’s staging. 
+In film studies, there is a somewhat dated theory, called auteur theory which provides a framework for understanding a director's unique imprint on their work. Film directors have a range of tools at their disposal – camera angles, editing techniques, lighting choices – that make their stylistic signatures more readily apparent. In theater, however, the director's expressive capabilities are more constrained, and their contribution can be more elusive to pin down. In the theater, a director is constrained more by the physical space that they’re staging in, and the fact that their work happens in real-time, by live actors,who mediate the director’s staging.
 
-This is where the computational analysis of pose in theater becomes interesting. By leveraging technologies like pose estimation and action recognition, we can begin to quantify aspects of theatrical performance that were previously left to subjective interpretation. We can analyze not just individual poses, but patterns of movement, spatial relationships between performers, and even the rhythm and flow of a production. Moreover, we can, as Peter will later discuss, use pose analysis to distinguish between the work of different directors, regardless of the actors, performance text, or designer. In this way, we can get closer to understanding the specific contributions that a director provides. This is important because a director’s work is often occluded, rarely mentioned within theater reviews, and most importantly, by several funding agencies considered, not “generative artform, but rather an interpretative artform” and thus not worthy of funding. 
+This is where the computational analysis of pose in theater becomes interesting. By leveraging technologies like pose estimation and action recognition, we can begin to quantify aspects of theatrical performance that were previously left to subjective interpretation. We can analyze not just individual poses, but patterns of movement, spatial relationships between performers, and even the rhythm and flow of a production. Moreover, we can, as Peter will later discuss, use pose analysis to distinguish between the work of different directors, regardless of the actors, performance text, or designer. In this way, we can get closer to understanding the specific contributions that a director provides. This is important because a director’s work is often occluded, rarely mentioned within theater reviews, and most importantly, by several funding agencies considered, not “generative artform, but rather an interpretative artform” and thus not worthy of funding.
 
 The question that you might be asking yourself, is “A purely data-driven analysis might pick up on patterns and consistencies in a director's work, but can it capture the nuanced, thematic use of pose that a trained theater scholar might recognize immediately?” This is the delicate balance we must strike. On one hand, we have the potential to uncover patterns and stylistic elements that might not be apparent to the naked eye, especially when analyzing a director's body of work as a whole. On the other hand, we risk reducing the rich, complex art of theater direction to a series of data points.
 
@@ -157,7 +154,6 @@ Our solution lies in a synthesis of approaches. By combining the insights of tra
 Ultimately, the problem of pose in theater is not just about understanding physical arrangements on stage. It's about decoding the language of movement that directors use to communicate their artistic vision. It's about recognizing patterns across productions that might reveal deeper truths about a director's style or preoccupations. And perhaps most excitingly, it's about opening up new avenues for creativity and analysis in the world of theater.
 
 I’m now going to turn things over to Peter to talk a little bit about our methodology for selecting pose models and our approach to analyzing theatrical productions.
-
 
 
 ---
@@ -278,6 +274,19 @@ The final tool that we adopted to extract, analyze and compare pose data does no
 # The MIME Platform
 
 
+:::
+* To allow us to experiment and work with these techniques and models, we have built a platform to support our development and to allow us to make this work accessible to Prof. Rau and to other researchers
+
+* the platform is what makes it possible for us to construct pipelines for processing and running inference against videos of theatrical performances
+
+* We can experiment with and evaluate different approaches and technologies, and we're also able to incorporate new developments as they arise, for example the shift from OpenPifPaf (the convolutional model) to the transformer-based PHALP model.
+
+* Furthermore the platform allow us to interrogate and visualize the results using things like
+  * similarity metrics
+  * nearest neighbour search
+  * clustering,
+  * and to visualize and explore the various data we're able to produce.
+
 ---
 
 
@@ -309,6 +318,37 @@ The final tool that we adopted to extract, analyze and compare pose data does no
 
 </div>
 
+:::
+
+This is a diagram of the platform, more-or-less as it exists now
+* it's somewhat loosely-coupled, and this is part of what allows us to easily swap in and out different parts
+
+
+* The hub of the platform is the vector database where the results of the lengthy and expensive inference and computational tasks are stored for retrieval and analysis
+
+  * we did look at dedicated vector database servers, things like Pinecone, Weviate, Qdrant etc, but even though it was fairly new at the time we decided to go with the `pgvector` extension for the venerable PostgreSQL database engine, and this has worked out well for us
+    * in addition to all the benefits of PostgresSQL (including the fact that we were already comfortable with it), `pgvector` has been very solid, and offers an array of in-engine similarity metrics and approaches to ANN-based indices
+    * and performance has been good
+      * the numbers change as we add and remove performances from the corpus,
+      * we currently have around 20 million embeddings in the database,
+      * and at this scale vector search is never a bottle-neck for us (although we do need to regularly retune the ANN indexes).
+
+* The application and inference server is container that has all our machine-learning dependencies available (so, CUDA and so on, as well as OpenCV and ffmpeg etc.) and its where all our machine learning and back-end  code runs
+  * the expermental nature of the project is such that this is a big ol' container; it provides a full data-science and machine-learning stack including the tensorflow and keras libraries, as *well* as pytorch, the scikit-learn stack, deepface, etc. and also a lot of the more domain-specific dependencies and toolchains described earlier.
+  * the container also runs a Jupyter Notebook server that I'll mention again later, and a FastAPI server that exposes the endpoints that are consumed by our web interface
+
+* Our web-ui is internal-facing (the platform is not exposed publicly at all at this time), and it's built with Svelte components on top of  the Astro framework.  We've learned a lot through working with the interface by this point, how best to present and interact with the data, and we're currently developing a mk.2 version which is using Sveltekit.
+
+* The web-ui and notebook server is sat behind a reverse proxy that makes it available to web-browsers
+
+* The whole thing is orchestrated with docker which makes it
+  * relatively easy to deploy across infrastructure platforms
+  * and allows us the same containerized environment across the inference and experimentation cycles (and we can also do training in that environment)
+  * and we can just deploy and fire up a notebook and get hacking against a replica of the production environment
+
+
+* so let's take a look at the interface
+
 ---
 
 
@@ -316,6 +356,106 @@ The final tool that we adopted to extract, analyze and compare pose data does no
 
 <video id="platform-demo-video" controls muted src="assets/mime-hai-seminar-demo-video.mp4"></video>
 
+:::
+
+* Performances
+  * On the initial screen we can see  the table of recordings that have been ingested into the platform
+    * The corpus of performances that we have in the system varies as we add and remove things according to our current interest; at present we have 11 recordings and a total of about 7 million poses.
+    * "Tracks" here refers to the number of appearances of a figure (an actor) who can be tracked across frames
+      * so for Julius Caesar here we have well over half a million individual poses detects, and this maps to a little under 3,000 tracks, so 3,000 unique sequences of the same figure moving throuh the same camera shot.
+    * "Shots" is the count of distinct camera shots; when a there's a scene change or a camera shot change, this number is incremented
+
+* So let's select the Stanford TAPS' production of Julius Caesar from March 2023, which was directed by Prof. Rau, and take a look.
+
+* Timeline
+  * The primary interface to the generated dataset is oriented around a timeline chart
+  * Here we have a time series along the x-axis, and a number of metrics of interest are plotted against the y-axis
+  * In the first place we have the track count, this green line, which represents the number of actors detected in the frame
+    * the face counts follow the track counts quite closely, and we would hope, and these discrepancies are mostly where actors are in the frame but are facing away from the camera
+    * here at the end of the production we can find the curtain call, where of course we have the highest track count and face count, as the whole cast is on stage and facing the camera
+  * the average score metric is the confidence score provided by the pose prediction model
+  * the pink lines represent camera shot changes  
+  * the MIME platform also derives metrics that represent the movement of figures on the stage, as well as indices of what we are terming pose and action "interest" -- the degree to which the poses and actions in the frame differ from baseline or "typical" poses and actions across the recording as a whole
+
+
+  * we can zoom in to this five-to-ten minute section here that covers the assasination of caesar
+    * frame # ~95,733 shows the conspirators standing around the body of Caesar
+    * we can see that the pipeline has done a decent job of picking out the seven actors on the stage in the this frame, including Caesar on the floor
+
+    * let's focus on Cassius who has their back to us here and is walking towards Caesar's body
+      * and search for similar poses across the performance
+    * on the left we have a 3D rendering of the pose itself (and we have an experimental editor we've been working on)
+    * and a card representing the source pose itself
+    * and then here we can see the top matches across the recording
+      * these small cutouts are a little difficult to see, especially when there's minimal contrast in the footage
+      * we can draw the pose diagrams over the top of the images to make them a little easier to see what's going on
+        * and now we can see we've found a number of other parts in the performance where an actor has their back to us and is walking away
+      * we can also return to the timeline to get a quick overview of where the most similar poses occur in the context of the recording as a whole
+      * ---
+
+    * the platform also allows us to work with and evaluate different similarity metrics for our searches
+      * here we're searching the view invariant embeddings instead of the original embeddings
+      * and this allows us to find people in similar walking poses irrespective of their orientation with respect the stage or the camera,
+      * we can see here we have found more parts of the performance where we have actors in similar walking poses but in different directions and from different angles
+    * ---
+    * in addition to the pose similarity search, we can also search for similar actions, using data derived using the LART technique
+      * we're still working on this, but it's interesting to see that different matches are surfaced when the additional movement context is part of the equation
+
+  * 3d scene
+    * using the "3D scene" toggle here we can activate the 3d reconstruction of the frame
+    * the 3d predictions provided by the pipeline allow the platform to present a visualization that represents the positions of the actors with respect to one another
+    * these data can support lots of different kinds of analyses, some of which will be discussed later
+    * here we can see Caesar on the floor with Cimber, Brutus is at the top of the steps, and here's Cassius in the pose we were just searching for
+
+  * so these are some of the affordances we have in the timeline view, and we can take a look now at some of the other views
+
+* Faces
+  * The "faces" interface is  a dot plot timeline that presents clusters that have been identified by face recognition and shows when recognized faces appear during the performance.
+  * this is very experimental still; we were hoping we could use face recognition to augment the actor-tracking, with the primary goal of tying together tracks that correspond to the same actor across shots
+  * this is still something we're working on, but the results here aren't as good as we'd like, mainly due to the very inconsistent quality of face recognition on footage like this
+  * so were looking at other ways to achieve our goals here
+
+* Poses
+  * the pose  cluster visualization presents a similar chart, shown here are 15 **groups** of poses that have been clustered on the basis of a similarity metric and they're shown as they're distributed across the timeline of the performance
+    * in addition to using different similarity metrics, the clusters themselves can be produced using a variety of techniques;
+    * here we've just used a simple UMAP algorithm for dimensionality reduction and the HDBSCAN algorithm to perform the clustering, but there are many other possibilities
+  * so for example cluster 15 is a cluster of seated poses including this section where MIchael has Brutus sitting on the front of the stage
+  * and we can see how poses in that similarity cluster are distributed across the performance
+
+* Explorer
+  * Another way of exploring the clusters is with the "PosePlot" explorer, which some folks might recognize as a modification we made of the PixPlot explorer from the Yale DH lab
+  * the cluster exemplars are over here on the left, and we can see our # 15 cluster of sitting folks over here,
+    * here we have a little group of Lucius sitting with hands on knees, leaning a little forward
+    * whereas over here we have a group from the same scene where they're leaning back a little more with their hands more in their lap
+    *
+  * there's also, for example, and interesting cluster down here (#14) of folks standing with their right arms down and their left arms bent, perhaps in a pocket, opening their bodies to the audience (here we have mainly Cassius, Casca, and Marcus Antonius I think)
+  * the PosePlot explorer also allows a timeline-like view which we sometimes refer to as the skyline view, where the poses are binned and stacked by minute, and this allows us another way to get a sense of how different clusters of poses are distributed across the performance
+
+
+* okay, so that's some of what we have in our mk.1 interface
+
+* I do also want to quickly show the mk.2 interface and how we're building on and improving what we've got
+  * here's the search interface as we see matches for that same pose we were looking at earlier
+    * this presentation makes it much easier to see the actors, even if the contrast is still sometimes an issue
+    * we can still view the pose overlay, of course
+    * and it's easy to get a view of the whole frame for additional context
+
+  * searching by all the available similarity metrics is still supported, here we're searching the view invariant embeddings again
+
+  * but one of the main focuses of the new interface is make it easier to operate across multiple performances
+    * so here you can see we're searching for that same pose performed by Cassius in Julius Caesar, but now we're returning matches from across the entire corpus of productions available to the platform
+    * and this opens up new possibilities for exploration
+  
+  * One thing that started out as a bit of fun but has proved surprisingly useful is the search-by-webcam feature we developed;
+    * here a frame can be captured from a webcam, then inference is performed client-side in the users' browser to produce a pose vector in the form we need, and then we can search the MIME database for matches
+      * so here I've performed a pose for the camera and we can look for matches in Julius Caesar, including these wonderful shots of a red-handed Brutus
+      * and we can also look for similar poses across the
+
+
+* And last but not least, the mk.1 interface provides a direct link to the embedded Jupyter server.
+* This has been really useful to us because it allows us to very easily spin up notebooks that are running remotely in the same containerized environment where our inference and analysis is done;
+  * same hardware, same dependencies installed and available, same interface to our embedding databases etc.
+* and this is extremely convenient for prototyping, experimenting, and just noodling around, as well as for conducting more formal analyses.  Peter is going to share some of the early results of some of those analyses now.
 
 ---
 
@@ -537,8 +677,8 @@ As a final analytical output of the effort just described, we can plot the simil
 # Implications
 
 :::
-The computational analysis of pose and action in theatrical performances, as presented in this research, opens new avenues for understanding directorial style. This is particularly significant because the creative contributions of directors are often overlooked or reduced to a single memorable moment or tableau. In reality, the staging of a theatrical production is a meticulous process that unfolds over weeks or even months, with the director crafting every moment of the performance. By leveraging this technology to examine their work in minute detail, we gain a more comprehensive view of their artistic vision. 
-And from my position, this technology is opening whole new ways of examining a performance, so I’m going to just go over some of the ways in which pose can allow for a unique analyses of a performance.  By using the pose similarity function we can start to identify recurring poses, symmetry within poses, and looking at the overall timeline view of a performance, to see the rhythmic ebb and flow of a staging. Using pose we can more readily identify the common themes and stylistic elements that define a director’s creative output, and separate out their unique contribution, divorced from the work of the performers, or the constraints of the particular text or physical space. 
+The computational analysis of pose and action in theatrical performances, as presented in this research, opens new avenues for understanding directorial style. This is particularly significant because the creative contributions of directors are often overlooked or reduced to a single memorable moment or tableau. In reality, the staging of a theatrical production is a meticulous process that unfolds over weeks or even months, with the director crafting every moment of the performance. By leveraging this technology to examine their work in minute detail, we gain a more comprehensive view of their artistic vision.
+And from my position, this technology is opening whole new ways of examining a performance, so I’m going to just go over some of the ways in which pose can allow for a unique analyses of a performance.  By using the pose similarity function we can start to identify recurring poses, symmetry within poses, and looking at the overall timeline view of a performance, to see the rhythmic ebb and flow of a staging. Using pose we can more readily identify the common themes and stylistic elements that define a director’s creative output, and separate out their unique contribution, divorced from the work of the performers, or the constraints of the particular text or physical space.
 By analyzing pose and movement across a director’s entire body of work, we can identify recurring patterns and trace the evolution of their style—elements that might remain elusive when examining individual performances in isolation. Additionally, this method enables objective comparisons between different directors’ interpretations of the same material, potentially revealing new dimensions of artistic expression and decision-making. By comparing different director’s versions of the same work, we can start to see how physical expression, and spatial storytelling evolves over time, or across different cultures, or in specific canonical works, look at how a director’s staging deviates from the traditional norms. Scholars could look at certain themes or characters that are represented physically over time, an easy topic would be to look at how kings are represented in different stagings, to see how poses associated with power and submission can vary over time. This technology could also be used to chart how an actor’s physical choices evolve through rehearsals and performances. Then scholars might use the rehearsal and performance pose data to study methodologies of actor training or directorial vision. Given the precision of the timeline view, we can also correlate pose data with audience response (based on applause or laughter) to see which types of physical expression elicit the strongest responses, so that could deepen our understanding of how audiences engage with a live performance. As a practicing artist, I see this tool enabling new types of staging, helping to rethink pose within canonical performances, and inspiring innovative uses of pose. And ultimately I see the potential of this technology to create an unprecedented record of a production’s physical language, which can be a valuable resource for future research, teaching, or restaging. The potential for scholarship and analysis enabled by this technology is vast.
 Moreover, the implications of this research extend beyond theater studies. First, this methodology can be readily adapted to analyze performances in film, opera, dance, and other any of the arts involving human movement. Beyond the arts, this approach could also be applied to diverse fields, from analyzing political speeches to studying the biomechanics of physiology and sports.
 However, it is crucial to acknowledge the ethical considerations and limitations inherent in this approach. As with all AI, there is a danger in hallucinations and incorrect pose estimations. There are always responsible use considerations when working with archival materials of directors, actors. This presents a complex ethical landscape that requires careful navigation, and as a team we’ve developed clear guidelines and frameworks to ensure respectful and responsible use of these technologies and materials.
