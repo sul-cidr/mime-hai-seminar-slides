@@ -32,6 +32,10 @@
     padding: 0.25em 0.5em;
     text-align: left;
     transition: all 0s;
+
+    &.fragment:first-child {
+      transform: none;
+    }
   }
 
   h2 + h2 {
