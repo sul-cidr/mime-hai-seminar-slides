@@ -4,7 +4,7 @@
   "blanks-around-headings": { "lines_above": 2 },
   "blanks-around-lists": false,
   "default": true,
-  "line-length": { "stern": true, "headings": false },
+  "line-length": false,
   "no-bare-urls": false,
   "no-inline-html": false,
   "single-h1": false

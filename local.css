@@ -24,6 +24,43 @@
   }
 }
 
+.reveal section.order-of-sections {
+  h2 {
+    border-radius: 8px;
+    margin-block: 0.5rem;
+    outline-offset: 4px;
+    padding: 0.25em 0.5em;
+    text-align: left;
+    transition: all 0s;
+
+    &.fragment:first-child {
+      transform: none;
+    }
+  }
+
+  h2 + h2 {
+    margin-left: 4rem;
+  }
+
+  h2 + h2 + h2 {
+    margin-left: 8rem;
+  }
+
+  h2 + h2 + h2 + h2 {
+    margin-left: 12rem;
+  }
+
+  h2 + h2 + h2 + h2 + h2 {
+    margin-left: 16rem;
+  }
+}
+
+.fragment.order-of-sections.current-fragment {
+  background-color: var(--box-color);
+  outline: 2px solid var(--box-color);
+  text-shadow: 0 0 12px black;
+}
+
 .reveal
   .slide-background-content:has(
     iframe[src="assets/bokeh/dg_poem_comparison.html"]
