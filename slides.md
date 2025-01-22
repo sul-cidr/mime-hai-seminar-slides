@@ -42,9 +42,9 @@ The project, titled **Machine Intelligence for Motion Exegesis**, is the result 
 
 **Peter Broadwell** is one of two Digital Scholarship Research Developers at RDS, where his work applies machine learning, web-based visualization, and other methods of digital analysis to complex cultural data. He has a Ph.D. in Musicology from UCLA and an M.S. in Computer Science from UC Berkeley.
 
-**Simon Wiles** is the other half of the Developer team at RDS. Before coming to Stanford in 2011 to begin a PhD in Buddhist Philology and Philosophy, worked, studied, and taught in Asia for many years, where he further developed his extensive technical background across several areas of study.
+**Simon Wiles** is the other Digital Scholarship Research Developer on the team at RDS. Before coming to Stanford in 2011 to begin a PhD in Buddhist Philology and Philosophy- he worked, studied, and taught in Asia for many years, where he further developed his extensive technical background across several areas of study.
 
-This project is part of a long-running service at the Stanford Libraries where faculty are invited to engage with our team in exploring computational approaches to analyzing, visualizing, and allowing for interactive exploration of their research. We have at times referred to these projects as **Lighthouse Projects**- our hope being that our collaborations are able to expose new pathways for scholarly inquiry that would only be possible through such long-term engagements, and the provisioning of dedicated technical resources.
+This project is part of a long-running service at the Stanford Libraries where faculty are invited to engage with our team in exploring computational approaches to analyzing and visualizing data, as well as creating affordances for interactive exploration of their research. We have at times referred to these projects as **Lighthouse Projects**- our hope being that our collaborations can help to expose new pathways for scholarly inquiry that would only be possible through such long-term engagements and the associated provisioning of dedicated technical resources.
 
 Our presentation will follow this structure:
 
