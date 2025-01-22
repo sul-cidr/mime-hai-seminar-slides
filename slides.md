@@ -52,20 +52,21 @@ I’ll ask Michael to come up now and share the project’s problem statement.
 ---
 
 
-## The Problem: Understanding Pose in Theater
+## ➡️ &nbsp; The Problem: Understanding Pose in Theater <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## Methodology: Models and Tools
+## ➡️ &nbsp; Methodology: Models and Tools <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## Building the MIME Platform (Demo)
+## ➡️ &nbsp; The MIME Platform <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## Results and Analysis
+## ➡️ &nbsp; Results and Analysis <!-- .element: class="fragment custom order-of-sections" -->
 
 
-## Implications and Future Directions
+## ➡️ &nbsp; Implications and Future Directions <!-- .element: class="fragment custom order-of-sections" -->
 
+<!-- .slide: class="order-of-sections" -->
 
 ---
 
@@ -519,7 +520,6 @@ However, it is crucial to acknowledge the ethical considerations and limitations
 From an analytical standpoint, we must also recognize the limitations of focusing solely on pose and action. Theater is a multifaceted art form, and while pose is a critical component, it represents only one thread in a rich tapestry that includes dialogue, set design, lighting, sound, and more. Without taking those other elements into account, we miss out on interpreting the While this computational analysis provides valuable insights, it should be viewed as a complement to, rather than a replacement for, traditional methods of artistic analysis. It offers a narrow but powerful lens through which to examine performance, enriching our understanding rather than supplanting it.
 Finally, it is important to note that this computational approach cannot definitively determine directorial intent. The patterns observed may stem from conscious directorial choices, actor improvisations, or even unintentional recurring elements. As such, these findings should serve as a starting point for deeper, more nuanced investigations rather than as definitive conclusions.
 In conclusion, while this research presents exciting possibilities for quantitative analysis in the arts, its true value lies in its potential to complement and enhance traditional scholarly approaches. By integrating computational methods with expert human interpretation, we can develop a more comprehensive understanding of theatrical performance and directorial style, ultimately enriching both academic discourse and artistic practice.
-
 
 
 ---
