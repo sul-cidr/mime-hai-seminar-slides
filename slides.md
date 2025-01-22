@@ -32,23 +32,23 @@
 </div>
 
 :::
-Hello and thank you for joining us today. My name is Vijoy Abraham and I am the Head of the Center for Interdisciplinary Digital Research, which is part of the Research Data Services unit at the Stanford Libraries. I’ll be introducing our topic, the project team, and a give quick overview of our talk today.
+Hello and thank you for joining us today. My name is Vijoy Abraham and I am the Head of the **Center for Interdisciplinary Digital Research**, which is part of the **Research Data Services** unit at the Stanford Libraries. I’ll be introducing our topic, the project team, and a give quick overview of our talk today.
 
 Our project draws from the field of cultural analytics, whereby computational methods are applied to the study of cultural heritage. We will discuss our exploratory work in bringing Machine Learning techniques to the study of theater performance and, in particular, to the study of directorial style.
 
-The project, titled Machine Intelligence for Motion Exegesis, is the result of a collaboration between Assistant Professor Michael Rau, and the Developer Team at Research Data Services. That team consists of Peter Broadwell and Simon Wiles.
+The project, titled **Machine Intelligence for Motion Exegesis**, is the result of a collaboration between Assistant Professor Michael Rau, and the Developer Team at Research Data Services. That team consists of myself, Peter Broadwell and Simon Wiles.
 
-Michael Rau is Assistant Professor of Theater and Performance Studies as well as an affiliate faculty member at HAI here at Stanford University. He received an MFA in Directing from Columbia University and has directed works internationally including plays, operas, and digital media projects and has been featured in the New York Times, the Guardian and the Telegraph, and was the recipient of a 2021 Artists + Machine Intelligence Research Award from Google.
+**Michael Rau** is Assistant Professor of Theater and Performance Studies as well as an ~affiliate faculty member~ at HAI here at Stanford University. He received an MFA in Directing from Columbia University and has directed works internationally including plays, operas, and digital media projects, and has been featured in the New York Times, the Guardian and the Telegraph. He was the recipient of a 2021 **Artists + Machine Intelligence** Research Award from Google.
 
-Peter Broadwell is one of two Digital Scholarship Research Developers at RDS, where his work applies machine learning, web-based visualization, and other methods of digital analysis to complex cultural data. He has a Ph.D. in Musicology from UCLA and an M.S. in Computer Science from UC Berkeley.
+**Peter Broadwell** is one of two Digital Scholarship Research Developers at RDS, where his work applies machine learning, web-based visualization, and other methods of digital analysis to complex cultural data. He has a Ph.D. in Musicology from UCLA and an M.S. in Computer Science from UC Berkeley.
 
-Simon Wiles is the other half of the Developer team at RDS. Before coming to Stanford in 2011 to begin a PhD in Buddhist Philology and Philosophy, worked, studied, and taught in Asia for many years, where he further developed his extensive technical background across several areas of study.
+**Simon Wiles** is the other half of the Developer team at RDS. Before coming to Stanford in 2011 to begin a PhD in Buddhist Philology and Philosophy, worked, studied, and taught in Asia for many years, where he further developed his extensive technical background across several areas of study.
 
-This project is part of a long-running service at the Stanford Libraries where faculty are invited to engage with our team in exploring computational approaches to analyzing, visualizing, and allowing for interactive exploration of their research. We have at times referred to these projects as Lighthouse Projects- our hope being that our collaborations are able to expose new pathways for scholarly inquiry that would only be possible through such long-term engagements, and the provisioning of dedicated technical resources.
+This project is part of a long-running service at the Stanford Libraries where faculty are invited to engage with our team in exploring computational approaches to analyzing, visualizing, and allowing for interactive exploration of their research. We have at times referred to these projects as **Lighthouse Projects**- our hope being that our collaborations are able to expose new pathways for scholarly inquiry that would only be possible through such long-term engagements, and the provisioning of dedicated technical resources.
 
 Our presentation will follow this structure:
 
-1 Michael: will present the Project’s problem statement
+1 Michael: will present the **Project’s problem statement**
 
 2 Peter: will describe some of the exploration of human pose detection, action identification, and facial recognition models that led to the development of the platform
 
@@ -56,9 +56,9 @@ Our presentation will follow this structure:
 
 4 Peter: will return to show us some of the results obtained thus far
 
-5 Michael: will describe Implications for theater and performance studies
+5 Michael: will then share Implications for theater and performance studies
 
-Wtih that, I’ll ask Michael to come up now.
+With that, I’ll ask Michael to come up now.
 
 
 ---
