@@ -76,23 +76,7 @@ I’ll ask Michael to come up now and share the project’s problem statement.
 :::
 Pose and staging lies at the intersection of authorial intent, directorial vision, and is shaped by design choices and is ultimately mediated by the performer.  So examining pose and staging in theater can be challenging since it sits at the heart of artistic expression and is so common and fundamental to the theater that it is often ignored. Our research addresses a fundamental question: How can we quantify and analyze the physical arrangements and movements of actors on stage to reveal meaningful insights about the director's creative contribution? 
 
-To answer this question, we turned to computer vision algorithms capable of detecting precise poses of the actors for every single frame of video in an archival production. Our methodology involves running pose detection on numerous archival videos, which would generate hundreds of thousands of poses, and then sift through that pose data in order to draw meaningful conclusions.
 
-In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In the theater, certain iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style. 
-
-However, these individual, memorable poses are just the tip of the iceberg. Our challenge lies in understanding the aggregate effect of all poses throughout a production, and even more ambitiously, across multiple productions by the same director, or by different interpretations of the same material by different directors. This approach brings us closer  to identifying the director's contribution to pose within the theater.
-
-In film studies, there is a somewhat dated theory, called auteur theory which provides a framework for understanding a director's unique imprint on their work. Film directors have a range of tools at their disposal – camera angles, editing techniques, lighting choices – that make their stylistic signatures more readily apparent. In theater, however, the director's expressive capabilities are more constrained, and their contribution can be more elusive to pin down. In the theater, a director is constrained more by the physical space that they’re staging in, and the fact that their work happens in real-time, by live actors,who mediate the director’s staging. 
-
-This is where the computational analysis of pose in theater becomes interesting. By leveraging technologies like pose estimation and action recognition, we can begin to quantify aspects of theatrical performance that were previously left to subjective interpretation. We can analyze not just individual poses, but patterns of movement, spatial relationships between performers, and even the rhythm and flow of a production. Moreover, we can, as Peter will later discuss, use pose analysis to distinguish between the work of different directors, regardless of the actors, performance text, or designer. In this way, we can get closer to understanding the specific contributions that a director provides. This is important because a director’s work is often occluded, rarely mentioned within theater reviews, and most importantly, by several funding agencies considered, not “generative artform, but rather an interpretative artform” and thus not worthy of funding. 
-
-The question that you might be asking yourself, is “A purely data-driven analysis might pick up on patterns and consistencies in a director's work, but can it capture the nuanced, thematic use of pose that a trained theater scholar might recognize immediately?” This is the delicate balance we must strike. On one hand, we have the potential to uncover patterns and stylistic elements that might not be apparent to the naked eye, especially when analyzing a director's body of work as a whole. On the other hand, we risk reducing the rich, complex art of theater direction to a series of data points.
-
-Our solution lies in a synthesis of approaches. By combining the insights of traditional theater scholarship with the analytical power of computational methods, we can begin to develop a more comprehensive understanding of pose in theater. We can use data to support and enhance our qualitative analyses, and we can use our human understanding of theatrical context to guide our interpretation of the data.
-
-Ultimately, the problem of pose in theater is not just about understanding physical arrangements on stage. It's about decoding the language of movement that directors use to communicate their artistic vision. It's about recognizing patterns across productions that might reveal deeper truths about a director's style or preoccupations. And perhaps most excitingly, it's about opening up new avenues for creativity and analysis in the world of theater.
-
-I’m now going to turn things over to Peter to talk a little bit about our methodology for selecting pose models and our approach to analyzing theatrical productions.
 
 
 
@@ -118,6 +102,9 @@ I’m now going to turn things over to Peter to talk a little bit about our meth
 </div>
 
 <!-- .slide: data-transition="slide-in fade-out" -->
+:::
+To answer this question, we turned to computer vision algorithms capable of detecting precise poses of the actors for every single frame of video in an archival production. Our methodology involves running pose detection on numerous archival videos, which would generate hundreds of thousands of poses, and then sift through that pose data in order to draw meaningful conclusions.
+
 
 ---
 
@@ -141,7 +128,22 @@ I’m now going to turn things over to Peter to talk a little bit about our meth
 </div>
 
 <!-- .slide: data-transition="fade-in slide-out" -->
+:::
+In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In the theater, certain iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style. 
 
+However, these individual, memorable poses are just the tip of the iceberg. Our challenge lies in understanding the aggregate effect of all poses throughout a production, and even more ambitiously, across multiple productions by the same director, or by different interpretations of the same material by different directors. This approach brings us closer  to identifying the director's contribution to pose within the theater.
+
+In film studies, there is a somewhat dated theory, called auteur theory which provides a framework for understanding a director's unique imprint on their work. Film directors have a range of tools at their disposal – camera angles, editing techniques, lighting choices – that make their stylistic signatures more readily apparent. In theater, however, the director's expressive capabilities are more constrained, and their contribution can be more elusive to pin down. In the theater, a director is constrained more by the physical space that they’re staging in, and the fact that their work happens in real-time, by live actors,who mediate the director’s staging. 
+
+This is where the computational analysis of pose in theater becomes interesting. By leveraging technologies like pose estimation and action recognition, we can begin to quantify aspects of theatrical performance that were previously left to subjective interpretation. We can analyze not just individual poses, but patterns of movement, spatial relationships between performers, and even the rhythm and flow of a production. Moreover, we can, as Peter will later discuss, use pose analysis to distinguish between the work of different directors, regardless of the actors, performance text, or designer. In this way, we can get closer to understanding the specific contributions that a director provides. This is important because a director’s work is often occluded, rarely mentioned within theater reviews, and most importantly, by several funding agencies considered, not “generative artform, but rather an interpretative artform” and thus not worthy of funding. 
+
+The question that you might be asking yourself, is “A purely data-driven analysis might pick up on patterns and consistencies in a director's work, but can it capture the nuanced, thematic use of pose that a trained theater scholar might recognize immediately?” This is the delicate balance we must strike. On one hand, we have the potential to uncover patterns and stylistic elements that might not be apparent to the naked eye, especially when analyzing a director's body of work as a whole. On the other hand, we risk reducing the rich, complex art of theater direction to a series of data points.
+
+Our solution lies in a synthesis of approaches. By combining the insights of traditional theater scholarship with the analytical power of computational methods, we can begin to develop a more comprehensive understanding of pose in theater. We can use data to support and enhance our qualitative analyses, and we can use our human understanding of theatrical context to guide our interpretation of the data.
+
+Ultimately, the problem of pose in theater is not just about understanding physical arrangements on stage. It's about decoding the language of movement that directors use to communicate their artistic vision. It's about recognizing patterns across productions that might reveal deeper truths about a director's style or preoccupations. And perhaps most excitingly, it's about opening up new avenues for creativity and analysis in the world of theater.
+
+I’m now going to turn things over to Peter to talk a little bit about our methodology for selecting pose models and our approach to analyzing theatrical productions.
 ---
 
 
