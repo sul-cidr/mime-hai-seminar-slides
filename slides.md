@@ -144,10 +144,11 @@ Our solution lies in a synthesis of approaches. By combining the insights of tra
 Ultimately, the problem of pose in theater is not just about understanding physical arrangements on stage. It's about decoding the language of movement that directors use to communicate their artistic vision. It's about recognizing patterns across productions that might reveal deeper truths about a director's style or preoccupations. And perhaps most excitingly, it's about opening up new avenues for creativity and analysis in the world of theater.
 
 I’m now going to turn things over to Peter to talk a little bit about our methodology for selecting pose models and our approach to analyzing theatrical productions.
+
 ---
 
 
-# Methodology
+## Methodology
 
 
 ---
