@@ -128,6 +128,7 @@ To answer this question, we turned to computer vision algorithms capable of dete
 </div>
 
 <!-- .slide: data-transition="fade-in slide-out" -->
+
 :::
 In traditional theater studies, the concept of pose is often taken for granted. Directors, performers and audiences intuitively understand the power of a well-crafted tableau or a precisely choreographed sequence of movements.  In the theater, certain iconic poses or choreography can define productions, like Brecht’s silent scream choreography in Mother Courage, or Bob Fosse’s shoulder roll and arm pops in The Pajama Game or the collective poses of the ensemble in "A Chorus Line.” These production’s indelible poses helped make the work memorable, and are a signature of a particular director’s contribution to the production, and serve as a shorthand for identifying a director’s style. 
 
@@ -145,10 +146,12 @@ Ultimately, the problem of pose in theater is not just about understanding physi
 
 I’m now going to turn things over to Peter to talk a little bit about our methodology for selecting pose models and our approach to analyzing theatrical productions.
 
+
+
 ---
 
 
-## Methodology
+# Methodology
 
 
 ---
